@@ -11,7 +11,7 @@ while true; do
 		echo "INHIBITING" >&2
 		systemd-inhibit \
 			--what idle \
-			--who audio-idle-inhibit \
+			--who systemd-audio-idle-inhibit \
 			--why "audio output or input active" \
 			--mode block \
 			sh -c "sleep $inhibit_duration"
